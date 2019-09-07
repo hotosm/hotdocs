@@ -1,5 +1,13 @@
 <head>
-        {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
+   <link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+   <script src="/js/vendor/lunr/lunr.min.js"></script>
+   {{ $scratch := newScratch }}
+   {{ $scratch.Add "lunr-langs" (slice "da" "de" "es" "fi" "fr" "hu" "it" "ja" "jp" "nl" "no" "pt" "ro" "ru" "sv" "th" "tr") }}
+   {{ if in ($scratch.Get "lunr-langs") .Site.Language.Lang }}
+   <script src="/js/vendor/lunr/lunr.stemmer.support.js"></script>
+   <script src="/js/vendor/lunr/lunr.{{ .Site.Language.Lang }}.js"></script>
+   {{ end }}
+   {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-    
 </head>

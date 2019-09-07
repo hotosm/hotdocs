@@ -1,35 +1,7 @@
 (function() {
     browseDocs();
     accordionExpand();
-    var languageSelect = document.querySelector('.js-language-select');
-    var languageSelectOptions = document.querySelector('.js-language-select-options');
-    languageSelect.open = false;
-    languageSelect.addEventListener('click', function(e) {
-        if (!languageSelect.open) {
-            languageSelect.open = true;
-            languageSelectOptions.classList.remove('language-select-options--hidden');
-        } else {
-            languageSelect.open = false;
-            languageSelectOptions.classList.add('language-select-options--hidden');
-        }
-    });
-
-    var languageOptions = languageSelectOptions.children;
-    for (var i =0; i< languageOptions.length; i++) {
-        languageOptions[i].addEventListener('click', languageClick)
-    }
-
-    function languageClick(e) {
-        var selectedLanguage = document.querySelector('.language-select-option--selected');
-        if (e.target != selectedLanguage) {
-            selectedLanguage.classList.remove('language-select-option--selected');
-            e.target.classList.add('language-select-option--selected');
-            languageSelect.innerHTML = e.target.innerHTML;
-            languageSelect.open = false;
-            languageSelectOptions.classList.add('language-select-options--hidden');
-        }
-    }
-
+    languageSelectHandler();
 
 
 })();
@@ -75,4 +47,38 @@ function accordionListener(e) {
         panel.classList.add('panel--closed');
     }
     accordion.open = accordion.open ? false : true;
+}
+
+function languageSelectHandler() {
+    var languageSelect = document.querySelector('.js-language-select');
+    var languageSelectOptions = document.querySelector('.js-language-select-options');
+    languageSelect.open = false;
+    languageSelect.addEventListener('click', function(e) {
+        if (!languageSelect.open) {
+            languageSelect.open = true;
+            languageSelect.classList.add('language-select--open');
+            languageSelectOptions.classList.remove('language-select-options--hidden');
+        } else {
+            languageSelect.open = false;
+            languageSelect.classList.remove('language-select--open');
+            languageSelectOptions.classList.add('language-select-options--hidden');
+        }
+    });
+
+    var languageOptions = languageSelectOptions.children;
+    for (var i =0; i< languageOptions.length; i++) {
+        languageOptions[i].addEventListener('click', languageClick)
+    }
+
+    function languageClick(e) {
+        var selectedLanguage = document.querySelector('.language-select-option--selected');
+        if (e.target != selectedLanguage) {
+            selectedLanguage.classList.remove('language-select-option--selected');
+            e.target.classList.add('language-select-option--selected');
+            languageSelect.innerHTML = e.target.innerHTML;
+            languageSelect.open = false;
+            languageSelectOptions.classList.add('language-select-options--hidden');
+        }
+    }
+
 }

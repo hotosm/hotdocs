@@ -1,0 +1,49 @@
+.language-select {
+    cursor: pointer;
+    height: 14px;
+    padding: 0 20px 0 30px;
+    font-size: 16px;
+    margin:8px 0 32px 8px;
+    border: none;
+    background-image: url('/svg/external-link-red.svg');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 14px;
+}
+
+.language-select-options {
+    margin-top: -22px;
+    position: absolute;
+    list-style: none;
+    box-shadow: 0 5px 20px 0 rgba(146, 157, 179, 0.21);
+
+
+    &--hidden {
+        visibility: hidden;
+    }
+}
+
+.language-select-option {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    min-width: 200px;
+    padding: 13px 24px;
+    background-color:white;
+
+    &--selected {
+        &:after {
+
+            margin-left:auto;
+            content: url('/svg/external-link-red.svg');
+            background-size: 11px 11px;
+            background-position: 0px;
+            height: 11px;
+            width: 11px;
+        }
+    }
+
+    &:hover {
+        background-color: #f0efef;
+    }
+}

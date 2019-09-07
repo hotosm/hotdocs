@@ -1,0 +1,34 @@
+.browse-select-options {
+    list-style: none;
+    position: absolute;
+    background-color:white;
+    top: 74px;
+
+    box-shadow: 0 13px 20px 0 rgba(146, 157, 179, 0.21);
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: condensed;
+
+    &--hidden {
+        visibility: hidden;
+    }
+
+    &--visible {
+
+    }
+
+    li {
+        cursor: pointer;
+        top: 0;
+        line-height: 18px;
+        height: 18px;
+        padding: 12px 24px;
+
+        &:hover {
+
+            color:$red;
+        }
+    }
+}

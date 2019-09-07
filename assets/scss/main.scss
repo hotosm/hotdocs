@@ -1,0 +1,176 @@
+@import 'variables';
+@import 'search';
+@import 'language-select';
+@import 'accordion';
+@import 'buttons';
+@import 'next-page';
+@import 'article';
+@import 'doc-select';
+
+@import 'resets';
+
+* {
+    margin: 0;
+    padding: 0;
+    color: $blue-dark;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+
+  font-family: Archivo; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  height: 74px;
+  line-height:74px;
+  box-shadow: 0 1px 0 0 $grey-light;
+  font-family: Barlow;
+  z-index: 999;
+
+  &__container {
+      width:100%;
+      margin: 0 16px;
+      display: flex;
+      .title {
+        font-size: 22px;
+        font-weight: 500; 
+    }
+  }
+}
+
+.main {
+  display:flex;
+  flex: 1;
+  height: calc(100% - 74px);
+}
+
+.menu {
+
+  flex: 2;
+  background-color: $menu-background;
+  overflow-y: scroll;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+      margin:17px;
+  }
+}
+
+.article {
+  flex: 5;
+  overflow-y: scroll;
+
+  &__container {
+    margin: 56px 71px; 
+  }
+}
+
+.toc {
+
+  flex: 2;
+  overflow-y: scroll;
+
+  &__container {
+    margin:25px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.toc-item {
+  height: 16px;
+  line-height: 16px;
+  padding: 10px 0;
+}
+
+.download-icon {
+  width: 13px;
+  height: 16px;
+}
+
+.edit-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.title {
+    font-family: Barlow;
+    font-weight: 500;
+}
+
+.site-title {
+  margin-left: 8px;
+}
+
+.hotosm-link {
+    display: flex;
+    margin-left: auto;
+    text-decoration: none;
+    font-size:12px;
+    color:$red;
+
+    &:after {
+        padding: 0 6px;
+        content: url('/svg/external-link-red.svg');
+        background-size: 11px 11px;
+        height: 11px;
+        width: 11px;
+      }
+}
+
+.nav-item  {
+    display: flex;
+    cursor: pointer;
+    color:$blue-dark;
+    font-size: 18px;
+    margin: 0 22px;
+    height: 18px;
+    line-height: 18px;
+    padding: 28px 0 6px 0;
+
+    &:hover {
+      border-bottom: 2px solid #2c3038;
+    }
+}
+
+
+.browse-link {
+  text-decoration: none;
+  color: $blue-dark;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.browse-select__arrow {
+    height: 20px;
+    width: 20px;
+
+    &--rotated {
+        -moz-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);       
+    }
+}
+
+.help {
+
+    text-decoration: none;
+
+}
+

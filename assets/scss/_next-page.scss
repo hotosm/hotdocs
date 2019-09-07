@@ -1,0 +1,27 @@
+.next-page {
+    text-decoration: none;
+    padding: 16px 24px;
+    display:flex;
+    border-radius: 2px;
+    border: solid 1px #ecebed;
+
+
+    &__container {
+        flex: 1;
+        .next-title {
+            text-decoration: none;
+            padding: 4px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .arrow {
+        margin-left:auto;
+    }
+
+    &:hover {
+        box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.08);
+    }
+
+}

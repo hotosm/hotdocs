@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="main">
+    <section class="menu">
+        <div class="menu__container">
+            {{- partial "menu.html" . -}}
+        </div>
+    </section>
+    <section class="article">
+        {{- partial "article.html" . -}}
+    </section>
+    <section class="toc">
+                {{- partial "toc.html" . -}}
+    </section>
+</div>
+{{ end }}

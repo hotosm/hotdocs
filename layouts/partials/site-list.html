@@ -1,0 +1,5 @@
+<ul class="browse-select-options browse-select-options--hidden js-browse-select-options">
+{{ range $.Site.Data.sites.sites }}
+   {{ partial "site.html" . }}
+{{ end }}
+</ul>

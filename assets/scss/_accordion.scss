@@ -1,0 +1,99 @@
+.pdf-download {
+    text-decoration: none;
+    color:black;
+    padding: 8px 0px;
+    margin: 16px 0;
+    border: solid 1px #ecebed;
+    background-color:white;
+    display: flex;
+
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+
+    img {
+        padding: 0 16px;
+    }
+}
+
+.sub-title {
+    text-decoration: none;
+    color: #929db3;
+
+    &-10 {
+        font-size: 10px;
+    }
+    &-12 {
+        font-size: 12px;
+    }
+    &-14 {
+        font-size: 14px;
+    }
+}
+
+.accordion {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    padding: 16px;
+    background-color:white;
+    box-shadow: 0 1px 2px 0 rgba(150, 156, 160, 0.16);
+
+    &--closed {
+        &:after {
+            content: '+';
+            color:$red;
+            font-weight: normal;
+            margin-left: auto;
+        }
+        margin-bottom:8px;
+    }
+
+    &--open {
+        &:after {
+            content: "–";
+            color:$red;
+            font-weight: normal;
+            margin-left: auto;
+        }
+    }
+}
+
+.panel {
+    display: flex;
+    padding-bottom:8px;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(150, 156, 160, 0.16);
+    margin-bottom:8px;
+
+    &--closed {
+        display: none;
+    }       
+}
+
+
+.page-list {
+    list-style: none;
+    width:100%;
+
+
+    li.page {
+        font-size: 14px;
+        font-weight: normal;
+        padding: 16px 32px;
+
+
+        &--active {
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+
+}

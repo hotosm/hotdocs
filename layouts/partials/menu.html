@@ -1,0 +1,52 @@
+
+
+<h2 class="title">{{ .Site.Title }}</h2> 
+<div>
+        {{ $defaultLang := .Site.Params.DefaultContentLanguage }}
+    <div class="js-language-select language-select">{{ .Site.Language.Lang }}</div>
+    <ul class="js-language-select-options language-select-options language-select-options--hidden">
+        <a href="/en" class="language-select-option language-select-option--selected">English</a>
+        <a href="/fr" class="language-select-option">French</a>
+    </ul>
+</div>
+
+
+
+<input class="search" type="text" placeholder="Search documentation">
+
+
+<div class="accordion accordion--closed">
+    Foo
+</div>
+<div class="panel panel--closed">
+    <ul class="page-list">
+        <li class="page">Page 1</li>
+        <li class="page">Page 2</li>
+        <li class="page">Page 3</li>
+    </ul>
+</div>
+
+<div class="accordion accordion--closed">
+        Data Collection and Field Mapping
+    </div>
+    <div class="panel panel--closed">
+        <ul class="page-list">
+            <li class="page"> <a href="">Page 1</a> </li>
+            <li class="page">Page 2</li>
+            <li class="page">Page 3</li>
+        </ul>
+    </div>
+
+<a class="pdf-download"  
+    {{ if .Site.IsMultiLingual }}
+    href="/pdfs/{{.Site.Language.Lang}}/{{ replace .Site.Title " " "_" }}.pdf">
+    {{ else }}
+    href="/pdfs/{{ replace .Site.Title " " "_" }}.pdf">
+    {{ end }}
+    <img src="/svg/files-icon-pdf.svg" alt="">
+    <div>
+        <div class="title">Download the entire file</div>
+        <div class="sub-title">pdf</div>
+    </div>
+    <img src="/svg/download.svg" alt="">
+</a>

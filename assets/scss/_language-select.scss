@@ -1,13 +1,13 @@
 .language-select {
     cursor: pointer;
-    height: 14px;
+    height: 16px;
     padding: 0 20px 0 30px;
     font-size: 16px;
-    margin:8px 0 32px 8px;
+    margin:8px 0 0 8px;
     border: none;
     background-image: url('/svg/globe.svg');
     background-repeat: no-repeat;
-    background-position: 0px 0px;
+    background-position: 0px 2px;
     background-size: 14px;
 
     &::after {

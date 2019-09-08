@@ -1,15 +1,36 @@
 
 
 <h2 class="title">{{ .Site.Title }}</h2> 
+{{ if .Site.IsMultiLingual }}
 <div>
-        {{ $defaultLang := .Site.Params.DefaultContentLanguage }}
-    <div class="js-language-select language-select">{{ .Site.Language.Lang }}</div>
+    {{ $defaultLang := .Site.Params.DefaultContentLanguage }}
+    {{ $currentLang := .Site.Language.Lang}}
+    <div class="js-language-select language-select">
+        {{ range .Site.Languages }}
+            {{ if eq $currentLang .Lang }}
+                {{ .LanguageName }} 
+            {{ end }}
+        {{ end }}
+    </div>
     <ul class="js-language-select-options language-select-options language-select-options--hidden">
-        <a href="/en" class="language-select-option language-select-option--selected">English</a>
-        <a href="/fr" class="language-select-option">French</a>
+            {{ range .Site.Languages }}
+            {{ if eq .Lang $defaultLang }}
+        <a href="/" class="language-select-option 
+        {{ if eq .Lang $currentLang }}
+        language-select-option--selected
+        {{ end }}
+        ">{{ .LanguageName }}</a>
+        {{ else }}
+        <a href="/{{.Lang}}" class="language-select-option
+        {{ if eq .Lang $currentLang}}
+        language-select-option--selected
+        {{ end }}
+        ">{{ .LanguageName }}</a>
+        {{ end }}
+        {{ end }}
     </ul>
 </div>
-
+{{ end }}
 <input class="search" type="text" placeholder="Search documentation">
 
 <div class="accordion accordion--closed">

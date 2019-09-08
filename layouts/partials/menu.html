@@ -10,10 +10,7 @@
     </ul>
 </div>
 
-
-
 <input class="search" type="text" placeholder="Search documentation">
-
 
 <div class="accordion accordion--closed">
     Foo
@@ -37,6 +34,8 @@
         </ul>
     </div>
 
+    
+
 <a class="pdf-download"  
     {{ if .Site.IsMultiLingual }}
     href="/pdfs/{{.Site.Language.Lang}}/{{ replace .Site.Title " " "_" }}.pdf">
@@ -46,7 +45,7 @@
     <img src="/svg/files-icon-pdf.svg" alt="">
     <div>
         <div class="title">Download the entire file</div>
-        <div class="sub-title">pdf</div>
+        <div class="sub-title sub-title-12">pdf</div>
     </div>
     <img src="/svg/download.svg" alt="">
 </a>

@@ -1,6 +1,5 @@
 .pdf-download {
     text-decoration: none;
-    color:black;
     padding: 8px 0px;
     margin: 16px 0;
     border: solid 1px #ecebed;
@@ -15,6 +14,10 @@
 
     img {
         padding: 0 16px;
+    }
+
+    &:hover {
+        box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.08);
     }
 }
 
@@ -42,12 +45,17 @@
     background-color:white;
     box-shadow: 0 1px 2px 0 rgba(150, 156, 160, 0.16);
 
+    &:after {
+        content: ' ';
+        padding-left:10px;
+        color:$red;
+        font-weight: normal;
+        margin-left: auto;
+    }
+
     &--closed {
         &:after {
             content: '+';
-            color:$red;
-            font-weight: normal;
-            margin-left: auto;
         }
         margin-bottom:8px;
     }
@@ -55,9 +63,6 @@
     &--open {
         &:after {
             content: "–";
-            color:$red;
-            font-weight: normal;
-            margin-left: auto;
         }
     }
 }

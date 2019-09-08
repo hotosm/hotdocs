@@ -59,7 +59,7 @@ body {
 
   flex: 2;
   background-color: $menu-background;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &__container {
     display: flex;
@@ -70,7 +70,7 @@ body {
 
 .article {
   flex: 5;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &__container {
     margin: 56px 71px; 
@@ -80,7 +80,7 @@ body {
 .toc {
 
   flex: 2;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &__container {
     margin:25px;
@@ -159,9 +159,9 @@ body {
 
 $arrow-transform-up: translate(0px,3px);
 $arrow-transform-down: rotate(-180deg) translate(-1px,2px);
+
 .browse-select__arrow {
-    height: 20px;
-    width: 20px;
+
     -moz-transform: $arrow-transform-up;
     -ms-transform: $arrow-transform-up;
     -o-transform: $arrow-transform-up;
@@ -180,3 +180,10 @@ $arrow-transform-down: rotate(-180deg) translate(-1px,2px);
     text-decoration: none;
 }
 
+.toc-divider {
+  border: none;
+  height: 1px;
+  color:#e1e0e0;
+  background-color: #e1e0e0;
+  margin: 12px 0 68px 0;
+}

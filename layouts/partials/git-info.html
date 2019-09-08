@@ -3,7 +3,7 @@
   {{ with .GitInfo }}
   <div>
     {{ $date := .AuthorDate.Local.Format (default "January 2, 2006" $.Site.Params.BookDateFormat) }}
-    <a href="{{ $.Site.Params.BookRepo }}/commit/{{ .Hash }}" class="sub-title sub-title-14" title='Last modified {{ $date }} by {{ .AuthorName }}' target="_blank" rel="noopener">
+    <a href="{{ $.Site.Params.GithubRepo }}/commit/{{ .Hash }}" class="sub-title sub-title-14" title='Last modified {{ $date }} by {{ .AuthorName }}' target="_blank" rel="noopener">
       Last modified: {{ $date }}
     </a>
   </div>

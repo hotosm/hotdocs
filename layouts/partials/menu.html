@@ -32,31 +32,20 @@
 </div>
 {{ end }}
 <input class="search" type="text" placeholder="Search documentation">
-
-<div class="accordion accordion--closed">
-    Foo
-</div>
-<div class="panel panel--closed">
-    <ul class="page-list">
-        <li class="page">Page 1</li>
-        <li class="page">Page 2</li>
-        <li class="page">Page 3</li>
-    </ul>
-</div>
-
-<div class="accordion accordion--closed">
-        Data Collection and Field Mapping
-    </div>
-    <div class="panel panel--closed">
-        <ul class="page-list">
-            <li class="page"> <a href="">Page 1</a> </li>
-            <li class="page">Page 2</li>
-            <li class="page">Page 3</li>
-        </ul>
-    </div>
-
-    
-
+{{ range .Site.Sections }}
+    {{ range .Sections}}
+        <div class="accordion accordion--closed">
+            {{ .Page.Title }}
+        </div>
+        <div class="panel panel--closed">
+                <ul class="page-list">
+                    {{ range .Pages }}
+                        <li class="page"><a href="{{ .Page.Permalink }}" class="menu-link">{{ .Page.Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+    {{ end }}
+{{ end }}
 <a class="pdf-download"  
     {{ if .Site.IsMultiLingual }}
     href="/pdfs/{{.Site.Language.Lang}}/{{ replace .Site.Title " " "_" }}.pdf">

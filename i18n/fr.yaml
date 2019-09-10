@@ -1,0 +1,18 @@
+- id: browse-documentation
+  translation: "Parcourir la documentation"
+- id: help
+  translation: "Aide"
+- id: read-next
+  translation: "Lire la suite"
+- id: on-this-page
+  translation: "Sur cette page"
+- id: download-this-page
+  translation: "Télécharger cette page"
+- id: edit-this-page-on-github
+  translation: "Modifier cette page sur github"
+- id: last-modified
+  translation: "Dernière modification"
+- id: download-the-entire-file
+  translation: "Télécharger le fichier entier"
+- id: search-documentation
+  translation: "Rechercher dans la documentation"

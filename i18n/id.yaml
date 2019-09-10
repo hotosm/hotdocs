@@ -1,0 +1,18 @@
+- id: browse-documentation
+  translation: "Jelajahi Dokumentasi"
+- id: help
+  translation: "Bantuan"
+- id: read-next
+  translation: "Baca Berikutnya"
+- id: on-this-page
+  translation: "di halaman ini"
+- id: download-this-page
+  translation: "Unduh halaman ini"
+- id: edit-this-page-on-github
+  translation: "Sunting halaman ini pada github"
+- id: last-modified
+  translation: "Pembaharuan terakhir"
+- id: download-the-entire-file
+  translation: "Unduh semua berkas"
+- id: search-documentation
+  translation: "Cari dokumentasi"

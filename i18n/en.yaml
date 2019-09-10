@@ -1,0 +1,18 @@
+- id: browse-documentation
+  translation: "Browse Documentation"
+- id: help
+  translation: "Help"
+- id: read-next
+  translation: "Read Next"
+- id: on-this-page
+  translation: "On this page"
+- id: download-this-page
+  translation: "Download this page"
+- id: edit-this-page-on-github
+  translation: "Edit this page on Github"
+- id: last-modified
+  translation: "Last modified"
+- id: download-the-entire-file
+  translation: "Download the entire file"
+- id: search-documentation
+  translation: "Search documentation"

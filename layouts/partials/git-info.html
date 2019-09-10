@@ -4,7 +4,7 @@
   <div>
     {{ $date := .AuthorDate.Local.Format (default "January 2, 2006" $.Site.Params.BookDateFormat) }}
     <a href="{{ $.Site.Params.GithubRepo }}/commit/{{ .Hash }}" class="sub-title sub-title-14" title='Last modified {{ $date }} by {{ .AuthorName }}' target="_blank" rel="noopener">
-      Last modified: {{ $date }}
+      {{ i18n "last-modified" }}: {{ $date }}
     </a>
   </div>
   {{ end }}

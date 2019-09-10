@@ -31,7 +31,7 @@
     </ul>
 </div>
 {{ end }}
-<input class="search" type="text" placeholder="Search documentation">
+<input class="search" type="text" placeholder="{{ i18n "search-documentation" }}">
 {{ range .Site.Sections }}
     {{ range .Sections}}
         <div class="accordion accordion--closed">
@@ -54,7 +54,7 @@
     {{ end }}
 
     <div>
-        <div class="title">Download the entire file</div>
+        <div class="title">{{ i18n "download-the-entire-file" }}</div>
         <div class="sub-title sub-title-12">pdf</div>
     </div>
 </a>

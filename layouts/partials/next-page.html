@@ -1,7 +1,7 @@
 {{if .NextPage}}
 <a class="next-page" href="{{.NextPage.Permalink}}">
     <div class="next-page__container">
-            <div class="sub-title sub-title-10">READ NEXT</div>
+            <div class="sub-title sub-title-10">{{ i18n "read-next" | upper }}</div>
             <div class="next-title">{{.NextPage.Title}}</div>
     </div>
     <img src="/svg/forward-arrow.svg" alt="">

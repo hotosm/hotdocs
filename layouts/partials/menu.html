@@ -31,7 +31,14 @@
     </ul>
 </div>
 {{ end }}
+
+{{ $scratch := newScratch }}
+{{ $scratch.Add "lunr-langs" (slice "da" "de" "en" "es" "fi" "fr" "hu" "it" "ja" "jp" "nl" "no" "pt" "ro" "ru" "sv" "th" "tr") }}
+{{ if in ($scratch.Get "lunr-langs") .Site.Language.Lang }}
+
 <input class="search" type="text" placeholder="{{ i18n "search-documentation" }}">
+
+{{ end }}
 {{ range .Site.Sections }}
     {{ range .Sections}}
         <div class="accordion accordion--closed">

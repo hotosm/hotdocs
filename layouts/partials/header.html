@@ -2,11 +2,12 @@
     <div class="header__container">
         <img src="/svg/hot-logo-red.svg" alt=""><h4 class="title site-title">{{ .Site.Title }}</h4>
         <div>
-        <div class="nav-item browse-select--closed js-browse-select">{{ i18n "browse-documentation" }}<div class="js-browse-select__arrow browse-select__arrow--rotated">&#8963;</div>
+        <div class="nav-item browse-select browse-select--closed js-browse-select">{{ i18n "browse-documentation" }}<div class="js-browse-select__arrow browse-select__arrow--rotated">&#8963;</div>
     </div>
     {{- partial "site-list.html" . -}}
-</div>
+    </div>
         <a href="" class="nav-item help">{{ i18n "help" }}</a>
         <a class="hotosm-link" href="https://hotosm.org">hotosm.org</a> 
+        <div class="hamburger-icon"></div>
     </div>
 </header>

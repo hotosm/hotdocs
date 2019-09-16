@@ -6,7 +6,7 @@
 @import 'next-page';
 @import 'article';
 @import 'doc-select';
-
+@import 'toc';
 @import 'menu';
 
 @import 'resets';
@@ -99,12 +99,14 @@ body {
 }
 
 .download-icon {
+  margin-right: 8px;
   vertical-align: middle;
   width: 13px;
   height: 16px;
 }
 
 .edit-icon {
+  margin-right: 8px;
   vertical-align: middle;
   width: 16px;
   height: 16px;
@@ -239,8 +241,6 @@ $arrow-transform-down: rotate(-180deg) translate(-1px,2px);
     display:block;
     margin-left: auto;
   }
-
-
 
   .article {
     flex: 1;

@@ -1,17 +1,17 @@
 {{ define "main" }}
 <div class="main">
-    <section class="menu">
+    <aside class="menu">
         <div class="menu__container">
             {{- partial "menu.html" . -}}
         </div>
-    </section>
-    <section class="article">
+    </aside>
+    <main class="article">
         {{- partial "article.html" . -}}
-    </section>
-    <section class="toc">
+    </main>
+    <aside class="toc">
         <div class="toc__container">
                 {{- partial "toc.html" . -}}
         </div>
-    </section>
+    </aside>
 </div>
 {{ end }}

@@ -1,16 +1,11 @@
 (function() {
-
-
     var lunrLangs = ["da", "de", "en", "es", "fi", "fr", "hu", "it", "ja", "jp", "nl", "no", "pt", "ro", "ru", "sv", "th", "tr"];
-    // get two elements from path in case page is hosted on githubpages first path item is repo name
-    var path = new URL(window.location.href).pathname.split('/').slice(1,3);
-    var lang;
-    for (var i = 0; i < lunrLangs.length; i++) {
-      if (path.indexOf(lunrLangs[i]) != -1) {
-        lang = lunrLangs[i];
-      }
+    var lang =  document.body.getAttribute('data-lang');
+    if (lang && lunrLangs.indexOf(lang) == -1) {
+      console.log('language not supported yet')
+      return
     }
-    
+
     var idx;
     var searchInput = document.querySelector('.search');
     var searchResultsList = document.querySelector('.results-list');
@@ -22,6 +17,7 @@
     var baseURL;
 
     if (url.indexOf('pages') != -1) {
+
         baseURL = url.split('pages')[0]
       fetch(baseURL + 'lunr-documents.json')
       .then(response => {

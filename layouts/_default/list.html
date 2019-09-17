@@ -2,6 +2,7 @@
 <article class="intro">
         <h1>{{ .Site.Title }}</h1>
         {{- .Content -}}
-        <a href="./pages"class="btn btn-primary">Read Documentation</a>
+        {{ $nextPage :=  index .Site.Pages 1}}
+        <a href="{{ $nextPage.RelPermalink }}"class="btn btn-primary">Read Documentation</a>
 </article>
 {{ end }}

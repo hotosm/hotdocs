@@ -20,7 +20,6 @@
 body, html {
   margin: 0;
   padding: 0;
-
   font-family: Archivo; 
 }
 
@@ -58,8 +57,14 @@ body {
   height: calc(100% - 74px);
 }
 
-.menu {
+.intro {
+  flex: 1;
+  margin:  40px 135px 0 135px;
+  padding-bottom: 40px;
+  line-height: 1.75;
+}
 
+.menu {
   flex: 2;
   background-color: $menu-background;
   overflow-y: auto;

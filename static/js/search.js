@@ -63,7 +63,7 @@
                     frag.appendChild(li);
                 }
                 searchResultsList.appendChild(frag);
-        }
-    }, 300)
-}
+              }
+          }, 300)
+      }
 })();

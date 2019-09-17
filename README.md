@@ -3,6 +3,7 @@
 ## Hugo theme for HOTOSM Documentation sites
 
 
+
 ### Quick setup instructions
 
 ```
@@ -31,6 +32,7 @@ and set ```hotdocs``` as your theme in your project config.toml file
 theme = "hotdocs"
 ```
 
+
 ### Usage
 
 
@@ -44,8 +46,9 @@ Content file structure:
 |       └── about.md
 ```
 
-[Site link header]() depends on ```sites.json``` from this [repo](https://github.com/hotosm/documentation-sites) added as a git submodule in the ```data``` directory of your hugo project.
+[Site link header](https://github.com/hotosm/documentation-sites) depends on ```sites.json``` from this [repo](https://github.com/hotosm/documentation-sites) added as a git submodule in the ```data``` directory of your hugo project.
 
 ```
 git submodule add https://github.com/hotosm/documentation-sites data
 ```
+

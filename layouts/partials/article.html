@@ -1,9 +1,11 @@
 <div class="article__container">
-    <div class="git-info">
+
+ 
+   <div class="git-info">
         {{- partial "git-info.html" . -}}
     </div>
     <div class="article-body">
-           <h1>{{ .Page.Title }}</h1>
+           <h1 class="page-title">{{ .Page.Title }}</h1>
             {{- .Content -}}
     </div>
     {{- partial "next-page.html" . -}}

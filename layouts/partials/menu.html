@@ -1,5 +1,6 @@
 
 
+{{ $currentPage := .Page}}
 <h2 class="title">{{ .Site.Title }}</h2> 
 {{ if .Site.IsMultiLingual }}
 <div>
@@ -15,13 +16,13 @@
     <ul class="js-language-select-options language-select-options language-select-options--hidden">
             {{ range .Site.Languages }}
             {{ if eq .Lang $defaultLang }}
-        <a href="/" class="language-select-option 
+        <a href="{{ $currentPage.RelPermalink }}" class="language-select-option 
         {{ if eq .Lang $currentLang }}
         language-select-option--selected
         {{ end }}
         ">{{ .LanguageName }}</a>
         {{ else }}
-        <a href="/{{.Lang}}" class="language-select-option
+        <a href="/{{.Lang}}{{ $currentPage.RelPermalink }}" class="language-select-option
         {{ if eq .Lang $currentLang}}
         language-select-option--selected
         {{ end }}
@@ -39,15 +40,29 @@
 <input class="search" type="text" placeholder="{{ i18n "search-documentation" }}">
 
 {{ end }}
+
+{{ $currentSection := .Page.Parent}}
 {{ range .Site.Sections }}
     {{ range .Sections}}
-        <div class="accordion accordion--closed">
+
+        <div class="
+        {{if eq $currentSection .Page}}
+        accordion accordion--open
+        {{ else }}
+        accordion accordion--closed
+        {{end}}
+        ">
             {{ .Page.Title }}
         </div>
-        <div class="panel panel--closed">
+        <div class="panel
+        {{if eq $currentSection .Page}}
+        panel--open
+        {{ else }}
+        panel--closed
+        {{end}}">
                 <ul class="page-list">
                     {{ range .Pages }}
-                        <li class="page"><a href="{{ .Page.Permalink }}" class="menu-link">{{ .Page.Title }}</a></li>
+                        <li class="page"><a href="{{ .Page.Permalink }}" class="menu-link{{ if eq $currentPage .Page}} menu-link--active{{ end }}">{{ .Page.Title }}</a></li>
                     {{ end }}
                 </ul>
             </div>

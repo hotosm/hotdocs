@@ -1,6 +1,7 @@
 
 {{$parent := .Page.Parent}}
 {{ $idx := 0 }}
+{{if .Page.Parent.Parent }}
 {{ range $index, $element := .Page.Parent.Parent.Pages }}
     {{ if eq $element $parent }}
     {{ $idx = add $index 1 }} 
@@ -26,4 +27,5 @@
     </div>
     <img src="/svg/forward-arrow.svg" alt="">
 </a>
-{{end}}
+{{ end }}
+{{ end }}

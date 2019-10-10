@@ -2,28 +2,28 @@
     browseDocs();
     accordionExpand();
     languageSelectHandler();
-
-
 })();
 
 function browseDocs() {
     var browseSelect = document.querySelector('.js-browse-select');
-    var browseArrow = document.querySelector('.js-browse-select__arrow');
-    var docsOptions = document.querySelector('.js-browse-select-options');
-    browseSelect.open = false;
-    browseSelect.addEventListener('click', function(e) {
-        var classRemove = e.target.open ? 'browse-select__arrow' : 'browse-select__arrow--rotated'; 
-        var classAdd = e.target.open ? 'browse-select__arrow--rotated' : 'browse-select__arrow'; 
-        browseArrow.classList.remove(classRemove);
-        browseArrow.classList.add(classAdd);
+    if (browseSelect) {
+        var browseArrow = document.querySelector('.js-browse-select__arrow');
+        var docsOptions = document.querySelector('.js-browse-select-options');
+        browseSelect.open = false;
+        browseSelect.addEventListener('click', function(e) {
+            var classRemove = e.target.open ? 'browse-select__arrow' : 'browse-select__arrow--rotated'; 
+            var classAdd = e.target.open ? 'browse-select__arrow--rotated' : 'browse-select__arrow'; 
+            browseArrow.classList.remove(classRemove);
+            browseArrow.classList.add(classAdd);
 
-        if (!e.target.open) {
-            docsOptions.classList.remove("browse-select-options--hidden")
-        } else {
-            docsOptions.classList.add("browse-select-options--hidden")
-        }
-        e.target.open = e.target.open ? false : true;
-    });
+            if (!e.target.open) {
+                docsOptions.classList.remove("browse-select-options--hidden")
+            } else {
+                docsOptions.classList.add("browse-select-options--hidden")
+            }
+            e.target.open = e.target.open ? false : true;
+        });
+    }
 }
 
 function accordionExpand() {

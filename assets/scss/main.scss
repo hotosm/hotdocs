@@ -54,6 +54,14 @@ body {
   display:flex;
   flex-direction: row;
   flex: 1;
+  height: calc(100% - 74px);
+}
+
+.intro-main {
+
+  display:flex;
+  flex-direction: row;
+  flex: 1;
 }
 
 .intro {

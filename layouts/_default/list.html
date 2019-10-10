@@ -1,8 +1,11 @@
 {{ define "main" }}
-<article class="intro">
+<div class="intro">
         <h1>{{ .Site.Title }}</h1>
         {{- .Content -}}
-        {{ $nextPage :=  index .Site.Pages 1}}
-        <a href="{{ $nextPage.RelPermalink }}"class="btn btn-primary">{{ i18n "read-documentation" }}</a>
-</article>
+        {{ $pages := index .Site.Sections 0 }}
+        {{ $firstSection := index $pages.Sections 0 }}
+        {{ $firstPage := index $firstSection.Pages 0 }}
+
+        <a href="{{ $firstPage.RelPermalink }}"class="btn btn-primary">{{ i18n "read-documentation" }} </a>
+</div>
 {{ end }}

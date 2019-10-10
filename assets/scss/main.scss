@@ -54,10 +54,10 @@ body {
   display:flex;
   flex-direction: row;
   flex: 1;
-  height: calc(100% - 74px);
 }
 
 .intro {
+  height: 100%;
   flex: 1;
   margin:  40px 135px 0 135px;
   padding-bottom: 40px;

@@ -16,3 +16,5 @@
   translation: "Unduh semua berkas"
 - id: search-documentation
   translation: "Cari dokumentasi"
+- id: read-documentation
+  translation: "Baca dokumentasi"

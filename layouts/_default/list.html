@@ -3,6 +3,6 @@
         <h1>{{ .Site.Title }}</h1>
         {{- .Content -}}
         {{ $nextPage :=  index .Site.Pages 1}}
-        <a href="{{ $nextPage.RelPermalink }}"class="btn btn-primary">Read Documentation</a>
+        <a href="{{ $nextPage.RelPermalink }}"class="btn btn-primary">{{ i18n "read-documentation" }}</a>
 </article>
 {{ end }}

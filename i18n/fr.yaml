@@ -16,3 +16,5 @@
   translation: "Télécharger le fichier entier"
 - id: search-documentation
   translation: "Rechercher dans la documentation"
+- id: read-documentation
+  translation: "Lire la documentation"

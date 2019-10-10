@@ -51,23 +51,25 @@ function accordionListener(e) {
 
 function languageSelectHandler() {
     var languageSelect = document.querySelector('.js-language-select');
-    var languageSelectOptions = document.querySelector('.js-language-select-options');
-    languageSelect.open = false;
-    languageSelect.addEventListener('click', function(e) {
-        if (!languageSelect.open) {
-            languageSelect.open = true;
-            languageSelect.classList.add('language-select--open');
-            languageSelectOptions.classList.remove('language-select-options--hidden');
-        } else {
-            languageSelect.open = false;
-            languageSelect.classList.remove('language-select--open');
-            languageSelectOptions.classList.add('language-select-options--hidden');
+    if (languageSelect) {
+        var languageSelectOptions = document.querySelector('.js-language-select-options');
+        languageSelect.open = false;
+        languageSelect.addEventListener('click', function(e) {
+            if (!languageSelect.open) {
+                languageSelect.open = true;
+                languageSelect.classList.add('language-select--open');
+                languageSelectOptions.classList.remove('language-select-options--hidden');
+            } else {
+                languageSelect.open = false;
+                languageSelect.classList.remove('language-select--open');
+                languageSelectOptions.classList.add('language-select-options--hidden');
+            }
+        });
+    
+        var languageOptions = languageSelectOptions.children;
+        for (var i =0; i< languageOptions.length; i++) {
+            languageOptions[i].addEventListener('click', languageClick)
         }
-    });
-
-    var languageOptions = languageSelectOptions.children;
-    for (var i =0; i< languageOptions.length; i++) {
-        languageOptions[i].addEventListener('click', languageClick)
     }
 
     function languageClick(e) {

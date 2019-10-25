@@ -147,7 +147,7 @@ body {
 
     &:after {
         padding: 0 6px;
-        content: url('~/svg/external-link-red.svg');
+        content: url('../svg/external-link-red.svg');
         background-size: 11px 11px;
         height: 11px;
         width: 11px;
@@ -175,7 +175,7 @@ body {
   width: 24px;
   height: 16px;
   content: ' ';
-  background-image: url('~/svg/hamburger.svg');
+  background-image: url('../svg/hamburger.svg');
   background-position-y: 22px;
   background-repeat: no-repeat;
 }

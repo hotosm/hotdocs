@@ -14,12 +14,12 @@
     &:before {
         margin:4px 12px 0 12px;
 
-        content: url('/svg/files-icon-pdf.svg');
+        content: url('../svg/files-icon-pdf.svg');
     }
 
     &:after {
         position: relative;
-        content: url('/svg/download.svg');
+        content: url('../svg/download.svg');
         margin-left: auto;
         right: 12px;
         top: 8px;

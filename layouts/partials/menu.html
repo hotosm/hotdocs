@@ -38,7 +38,9 @@
 {{ if in ($scratch.Get "lunr-langs") .Site.Language.Lang }}
 
 <input class="search" type="text" placeholder="{{ i18n "search-documentation" }}">
-
+<div class="search-results">
+    <ul class="results-list"></ul>
+</div>
 {{ end }}
 
 {{ $currentSection := .Page.Parent}}

@@ -17,3 +17,26 @@
         outline: none;
     }
 }
+
+.search-results {
+    background-color:white;
+    position: relative;
+
+    &--visible {
+
+      padding:10px;
+
+      border-radius: 2px;
+      box-shadow: 0px 2px 15px rgba(0,0,0,0.2);
+      z-index: 999999;
+    }
+  }
+
+  .results-list {
+    list-style: none;
+
+    li {
+      padding-top: 5px;
+    }
+
+  }

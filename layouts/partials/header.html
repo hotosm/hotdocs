@@ -1,6 +1,6 @@
 <header class="header" >
     <div class="header__container">
-        <img src="/svg/hot-logo-red.svg" alt=""><h4 class="title site-title">{{ .Site.Title }}</h4>
+        <img src="{{ .Site.Params.SiteURL }}/svg/hot-logo-red.svg" alt=""><h4 class="title site-title">{{ .Site.Title }}</h4>
         <div>
         {{ if .Site.Data.sites }}
         <div class="nav-item browse-select browse-select--closed js-browse-select">{{ i18n "browse-documentation" }}<div class="js-browse-select__arrow browse-select__arrow--rotated">&#8963;</div>

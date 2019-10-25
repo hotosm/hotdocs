@@ -72,6 +72,10 @@ body {
   line-height: 1.75;
 }
 
+.intro-container {
+  padding-bottom:50px;
+}
+
 .menu {
   flex: 2;
   background-color: $menu-background;
@@ -208,6 +212,7 @@ $arrow-transform-down: rotate(-180deg) translate(-1px,2px);
 .help {
     text-decoration: none;
 }
+
 
 .toc-divider {
   border: none;

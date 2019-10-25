@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="intro">
-        <h1>{{ .Site.Title }}</h1>
+        <h1>Welcome to {{ .Site.Title }}</h1>
         {{- .Content -}}
         {{ $pages := index .Site.Sections 0 }}
         {{ $firstSection := index $pages.Sections 0 }}

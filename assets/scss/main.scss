@@ -50,6 +50,10 @@ body {
   }
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 .main {
   display:flex;
   flex-direction: row;
@@ -153,6 +157,8 @@ body {
         width: 11px;
       }
 }
+
+
 
 .nav-item  {
     display: flex;

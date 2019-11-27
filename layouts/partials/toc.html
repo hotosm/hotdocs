@@ -1,12 +1,15 @@
 <div class="toc__container">
     {{ $showTOC := default true .Site.Params.showTOC }}
     {{ if $showTOC }}
+    {{ $tocLen :=  len .Page.TableOfContents}}
+    {{ if gt $tocLen 0}}
     <div class="toc-list">
         <h4 class="sub-title sub-title-10">{{ i18n "on-this-page" | upper }}</h4>
         {{ .Page.TableOfContents }}
     </div>
-    {{ end }}
     <hr class="toc-divider">
+    {{ end }}
+    {{ end }}
     <a href="{{ .Site.Params.GithubRepo }}/edit/master/content/{{ if .Site.Language.Lang }}{{.Site.Language.Lang}}/{{ end }}{{ $.File.Path }}" class="sub-title sub-title-12 toc-item"> <img src="/svg/pencil.svg" class="edit-icon" alt="">{{ i18n "edit-this-page-on-github" }}</a>
     <a 
     {{ if .Site.IsMultiLingual }}

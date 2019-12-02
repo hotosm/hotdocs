@@ -13,21 +13,25 @@
             {{ end }}
         {{ end }}
     </div>
+    {{ $siteParams := .Site.Params}}
     <ul class="js-language-select-options language-select-options language-select-options--hidden">
             {{ range .Site.Languages }}
+            {{ $langPath := printf "/%s" $currentLang}}
+            <li>
             {{ if eq .Lang $defaultLang }}
-        <a href="{{ $currentPage.RelPermalink }}" class="language-select-option 
+        <a href="{{ $siteParams.SiteURL }}{{ replace $currentPage.RelPermalink $langPath "" }}" class="language-select-option 
         {{ if eq .Lang $currentLang }}
         language-select-option--selected
         {{ end }}
         ">{{ .LanguageName }}</a>
         {{ else }}
-        <a href="/{{.Lang}}{{ $currentPage.RelPermalink }}" class="language-select-option
+        <a href="{{ $siteParams.SiteURL }}{{ if ne .Lang $currentLang }}{{"/"}}{{ .Lang }}{{ end }}{{ $currentPage.RelPermalink }}" class="language-select-option
         {{ if eq .Lang $currentLang}}
         language-select-option--selected
         {{ end }}
-        ">{{ .LanguageName }}</a>
+        ">{{ .LanguageName }}  </a>
         {{ end }}
+    </li>
         {{ end }}
     </ul>
 </div>

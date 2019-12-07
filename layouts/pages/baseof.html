@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    <body {{ if .Site.IsMultiLingual }}  data-lang='{{ .Site.Language.Lang }}' {{ end }}  >
+    <body data-site-url='{{ .Site.Params.SiteURL }}' {{ if .Site.IsMultiLingual }} data-default-lang='{{ .Site.Params.DefaultContentLanguage }}' data-lang='{{ .Site.Language.Lang }}' {{ end }}  >
         {{- partial "header.html" . -}}
 
         {{- block "main" . }}{{- end }}

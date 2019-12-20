@@ -1,15 +1,34 @@
 {{ define "main" }}
+<style>
+img {
+        max-width: 100%;
+}
+ul {
+        margin-bottom: 50px;
+}
+</style>
 <div class="intro">
         <div class="intro-container">
-                        <h1>Welcome to {{ .Site.Title }}</h1>
+        <h1>Welcome to {{ .Site.Title }}</h1>
         {{- .Content -}}
+        
         {{ $pages := index .Site.Sections 0 }}
         {{ $firstSection := index $pages.Sections 0 }}
+        {{ if $firstSection }}
+
         {{ $firstPage := index $firstSection.Pages 0 }}
         </div>
 
 
         <a href="{{ $firstPage.RelPermalink }}"class="btn btn-primary read-doc-btn">{{ i18n "read-documentation" }} </a>
+        {{ else }}
+                
+        {{ $firstPage := index .Site.Pages 0 }}
+        <a href="{{ $firstPage.RelPermalink }}"class="btn btn-primary read-doc-btn">{{ i18n "read-documentation" }} </a>
+        </div>
+
+        {{ end }}
+
 </div>
 
 {{ end }}

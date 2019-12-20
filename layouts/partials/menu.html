@@ -48,6 +48,20 @@
 {{ end }}
 
 {{ $currentSection := .Page.Parent}}
+
+{{ if eq (len .Site.Sections) 1 }}
+
+<div class="accordion accordion--open">
+    Pages
+</div>
+<div class="panel panel--open">
+                <ul class="page-list">
+                    {{ range .Site.RegularPages }}
+                        <li class="page"><a href="{{ .Page.Permalink }}" class="menu-link{{ if eq $currentPage .Page}} menu-link--active{{ end }}">{{ .Page.Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+{{ else }}
 {{ range .Site.Sections }}
     {{ range .Sections}}
 
@@ -73,6 +87,7 @@
                 </ul>
             </div>
     {{ end }}
+{{ end }}
 {{ end }}
 <a class="pdf-download"  
     {{ if .Site.IsMultiLingual }}

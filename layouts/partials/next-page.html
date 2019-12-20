@@ -8,6 +8,17 @@
     {{ end }}
 {{ end }}
 {{ $pages := index .Site.Sections 0 }}
+{{ if eq (len .Site.Sections) 1 }}
+{{ if .PrevInSection }}
+<a class="next-page" href="{{.PrevInSection.Permalink}}">
+    <div class="next-page__container">
+            <div class="sub-title sub-title-10">{{ i18n "read-next" | upper }}</div>
+            <div class="next-title">{{.PrevInSection.Title}}</div>
+    </div>
+    <img src="/svg/forward-arrow.svg" alt="">
+</a>
+{{end}}
+{{ else }}
 {{ $nextSection := index $pages.Sections $idx }}
 
 {{if .PrevInSection }}
@@ -27,5 +38,6 @@
     </div>
     <img src="/svg/forward-arrow.svg" alt="">
 </a>
+{{ end }}
 {{ end }}
 {{ end }}

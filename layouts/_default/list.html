@@ -4,12 +4,11 @@
                         <h1>Welcome to {{ .Site.Title }}</h1>
         {{- .Content -}}
         {{ $pages := index .Site.Sections 0 }}
-        {{ $firstSection := index $pages.Sections 0 }}
-        {{ $firstPage := index $firstSection.Pages 0 }}
+
         </div>
 
 
-        <a href="{{ $firstPage.RelPermalink }}"class="btn btn-primary read-doc-btn">{{ i18n "read-documentation" }} </a>
+        <a href=""class="btn btn-primary read-doc-btn">{{ i18n "read-documentation" }} </a>
 </div>
 
 {{ end }}

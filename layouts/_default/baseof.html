@@ -12,6 +12,12 @@
         {{- block "main" . }}{{- end }}
      
         {{- partial "footer.html" . -}}
+        
+        {{ if .Site.Params.matomoSiteID }}
+        <div id="optout-form" ></div>
+        <script type="application/javascript">var site_id = "{{ .Site.Params.matomoSiteID }}"</script>
+        <script type="application/javascript" src="https://cdn.hotosm.org/tracking-v3.js"></script>
+        {{ end }}
 
     </body>
 </html>

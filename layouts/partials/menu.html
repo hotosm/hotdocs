@@ -62,9 +62,7 @@
                 </ul>
             </div>
 {{ else }}
-{{ range .Site.Sections }}
-    {{ range .Sections}}
-
+    {{ range .Site.Sections }}
         <div class="
         {{if eq $currentSection .Page}}
         accordion accordion--open
@@ -87,7 +85,6 @@
                 </ul>
             </div>
     {{ end }}
-{{ end }}
 {{ end }}
 <a class="pdf-download"  
     {{ if .Site.IsMultiLingual }}
